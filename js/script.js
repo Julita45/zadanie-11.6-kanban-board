@@ -15,7 +15,7 @@ function randomString() {
         str += chars[Math.floor(Math.random() * chars.length)];
     }
     return str;
-};
+}
 
 function Column(name) {
     var self = this;
@@ -44,8 +44,8 @@ function Column(name) {
 	        .append($columnAddCard)
 	        .append($columnCardList);
 		return $column;
-	};
-};
+	}
+}
 
 Column.prototype = {
 	    addCard: function(card) {
@@ -75,21 +75,21 @@ function Card(description) {
 		$card.append($cardDelete)
 			.append($cardDescription);
 		return $card;
-    };
+    }
 
     Card.prototype = {
 		removeCard: function() {
 		this.$element.remove();
 		}
 	};
-};
+}
 
 function initSortable() {
    $('.column-card-list').sortable({
      connectWith: '.column-card-list',
      placeholder: 'card-placeholder'
    }).disableSelection();
-};
+}
 
 $('.create-column')
   .on('click',function(){
